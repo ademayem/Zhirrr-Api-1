@@ -1,69 +1,53 @@
-<title>.::[+] alpin ofc [+]::.</title>
-<body onload="type_text()" alink="#000000" bgcolor="#000000" vlink="#000000" link="#c0c0c0" text="#000000">
-<div align="center">
 
-<script language="Javascript"><!--
-var tl=new Array(
-
-"   ",
-"   peringatan: ",
-"   ",
-"   gunakan dengan bijak yak ini api",
-"   api ini free buat kalian semua ",
-"   untuk apikeynya:alpinofc",
-"   ",
-"   thanks to,",
-"   daffa",
-"   zahir",
-"   yogi",
-"   hans",
-"   arul",
-"   note:",
-"   jika ada bug atau apa di ini apikey tolong kabarin saya",
-"   "
-
-);
-var speed=50;
-var index=0; text_pos=0;
-var str_length=tl[0].length;
-var contents, row;
-
-function type_text()
-{
-
-  contents='';
-  row=Math.max(0,index-15);
-  while(row<index)
-    contents += tl[row++] + '\r\n';
-  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "|";
-  if(text_pos++==str_length)
-  {
-    text_pos=0;
-    index++;
-    if(index!=tl.length)
-    {
-      str_length=tl[index].length;
-      setTimeout("type_text()",500);
-    }
-  } else
-    setTimeout("type_text()",speed);
-}
-//--></script>
-<style type="text/css">BODY {
-	SCROLLBAR-FACE-COLOR: #000000; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #000000; SCROLLBAR-BASE-COLOR: #000000
-}
-</style>
-
-<style fprolloverstyle="">
-TEXTAREA {
-	BORDER-LEFT-COLOR: #000000; BACKGROUND: #000000; BORDER-BOTTOM-COLOR: #000000; FONT: 12px Verdana, Verdana, Verdana, Verdana; COLOR: #d3d3d3; BORDER-TOP-COLOR: #000000; BORDER-RIGHT-COLOR: #000000
-}
-</style>
-
-<h2><font color="#cecece" face="Caurier" size="12">alpinofc</font></h2>
-<form><font color="#ff0000">
-	<textarea rows="15" cols="90" readonly="readonly"></textarea> 
-</font></form>
-<br><font color="grey" size=1 face="Verdana, Arial, Helvetica, sans-serif"><Hmei7></font> 
-</div>
-</body>< WIN-0V7G2AGVI27 | Administrator | Dutch (Netherlands) | 30-3-2014 15:29:45 >
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="APP Caranya My Id, Web Aplikasi Yang Berguna Untuk 1000 Umat" />
+    <meta name="author" content="AgustD" />
+    <meta content='#007FFF' name='theme-color'/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <base target="_blank"/>
+    <title>About Me - OjanGanz</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins');
+      *{
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient shadow mb-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">MIKU API</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://api-ojanhaxor.herokuapp.com/">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://api-ojanhaxor.herokuapp.com/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="card m-3 text-center shadow">
+      <h2 class="card-header shadow-sm bg-primary text-white">About Me</h2>
+      <div class="card-body">
+      <div class="text-center">
+        <img src="https://i.ibb.co/G9vkZxM/Ojan.jpg" class="rounded-circle shadow mb-3" alt="Zhirrr" width="150px" height="150px">
+      </div>
+        <p class="card-text text-shadow">Web API Ini dibuat oleh Ojan sepenuhnya oleh saya juga beberapa bantuan teman saya.<br/>Senang dari kecil tentang programming<br/>
+        Dengan nama asli saya <b>Fauzan Salam Muttaqin</b><br/>Bahasa pemrograman yang saya ketahui hanya sedikit, yaitu (HTML/CSS/JavaScript), Python, Java, dan C#<b/><br/>Rest API ini juga dalam tahap pengembangan, jadi mohon doa dan dukungannya. semoga bisa bermanfaat untuk banyak orang<br/>Terimakasih.</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
