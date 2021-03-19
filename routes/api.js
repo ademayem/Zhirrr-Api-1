@@ -3,12 +3,12 @@ __path = process.cwd()
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var alpinofc = db.get("alpinofc");
+var ojanganz = db.get("ojanganz");
 } catch (e) {
 	console.log('')
 }
 
-var creatorList = ['@alpin','@alpin','@alpin_xploit','@alpin', '@alpinofc','@alpinofc','@alpinofc'];
+var creatorList = ['@ojan','@OJAN','@POJAN','@POJANGANZ', '@OJANX','@OJANXGANZ','@FznXSec404'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
@@ -41,7 +41,7 @@ loghandler = {
         creator: `${creator}`,
         code: 406,
         message: 'masukan parameter apikey',
-        getApikey: 'gak punya apikey? chat gw aja yaaa di wa.me/6289690719275 , key nya gratis kok gan, jadi santuyy ajaa'
+        getApikey: 'gak punya apikey? chat gw aja yaaa di wa.me/6289666262976 , key nya gratis kok gan, jadi santuyy ajaa'
     },
     notkey: {
         status: false,
@@ -113,7 +113,7 @@ loghandler = {
         status: false,
         creator: `${creator}`,
         code: 406,
-        message: 'apikey invalid, gak punya apikey? chat gw aja yaaa di wa.me/6289690719275 , key nya gratis kok gan, jadi santuyy ajaa'
+        message: 'apikey invalid, gak punya apikey? chat gw aja yaaa di wa.me/6289666262976 , key nya gratis kok gan, jadi santuyy ajaa'
     },
     invalidlink: {
         status: false,
@@ -153,20 +153,20 @@ var len = 15
             randomlagi += arr[Math.floor(Math.random() * arr.length)];
         }
 
-        var randomTextNumber = random+randomlagi+'---------alpinofc'+'alpinofc';
+        var randomTextNumber = random+randomlagi+'---------Miku'+'Ojan';
         
  
  async function cekApiKey(api) {
- 	ap = await alpinofc.findOne({apikey:api})
+ 	ap = await fznxsec.findOne({apikey:api})
  return ap;
  }
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'alpinofc') return res.json(loghandler.invalidKey)
+    if (apikey != 'ojanganz') return res.json(loghandler.invalidKey)
 
     try {
-        alpinofc.find()
+        fznxsec.find()
             .then(result => {
                 res.json({
                     status: true,
@@ -224,10 +224,10 @@ router.get('/addapikey', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'alpinofc') return res.json(loghandler.invalidKey)
+    if (apikey != 'ojanganz') return res.json(loghandler.invalidKey)
 
     try {
-        alpinofc.insert({
+        fznxsec.insert({
         	status: status,
             apikey: apikeyInput,
             email: email,
@@ -263,10 +263,10 @@ router.get('/remove', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'alpinofc') return res.json(loghandler.invalidKey)
+    if (apikey != 'ojanganz') return res.json(loghandler.invalidKey)
 
     try {
-        alpinofc.remove({
+        fznxsec.remove({
             status: status,
             apikey: apikeyInput,
             email: email,
@@ -295,7 +295,7 @@ router.get('/tiktod', async (req, res, next) => {
 
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      TikTokScraper.getVideoMeta(url, options)
@@ -317,7 +317,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
         username = req.query.username
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if (!username) return res.json(loghandler.notusername)
 
 
@@ -342,7 +342,7 @@ router.get('/randomquote', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/random/quotes`))
         .then(response => response.json())
@@ -364,7 +364,7 @@ router.get('/infonpm', async (req, res, next) => {
             query = req.query.query
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if (!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://registry.npmjs.org/${query}`))
@@ -389,7 +389,7 @@ router.get('/short/tiny', async (req, res, next) => {
         url = req.query.url
 
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
      if (!url) return res.json(loghandler.noturl)
 
      request(`https://tinyurl.com/api-create.php?url=${url}`, function (error, response, body) {
@@ -415,7 +415,7 @@ router.get('/base', async (req, res, next) => {
 		decode = req.query.decode,
 		apikeyInput = req.query.apikey;
 		if (!apikeyInput) return res.json(loghandler.notparam)
-		if (apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+		if (apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 		if (!type) return res.json({status: false, creator, code: 404, message: 'masukan parameter type, type yang tersedia : base64 , base32'})
 		if (type == 'base64' && encode){
 				Base("b64enc", encode)
@@ -468,7 +468,7 @@ router.get('/nulis', async (req, res, next) => {
 	var text = req.query.text,
 		 apikeyInput = req.query.apikey;
 	if(!apikeyInput) return res.json(loghandler.notparam)
-     if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+     if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	 if(!text) return res.json(loghandler.nottext)
 		Nulis(text)
 		 .then(hasil => {
@@ -502,7 +502,7 @@ router.get('/textmaker', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'glitch' && theme != 'google-suggestion') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -592,7 +592,7 @@ router.get('/textmaker/game', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'pubg' && theme != 'battlefield') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -681,7 +681,7 @@ router.get('/textmaker/senja', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'coffee-cup' && theme != 'coffee-cup2') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -765,7 +765,7 @@ router.get('/kisahnabi', async (req, res, next) => {
 		apikeyInput = req.query.apikey;
 
 		if (!apikeyInput) return res.json(loghandler.notparam)
-		if (apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+		if (apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 		Searchnabi(nabi)
 		.then(result => {
 			res.json({
@@ -783,7 +783,7 @@ router.get('/infogempa', async (req, res, next) => {
 	        var apikeyInput = req.query.apikey
 
 		if (!apikeyInput) return res.json(loghandler.notparam)
-		if (apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+		if (apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 		Gempa()
 		.then(result => {
 			res.json({
@@ -803,7 +803,7 @@ router.get('/hadits', async (req, res, next) => {
             nomor = req.query.nomor
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if (!kitab) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kitab"})
     if (!nomor) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nomor"})
 
@@ -827,7 +827,7 @@ router.get('/quran', async (req, res, next) => {
             ayat = req.query.ayat
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if (!surah) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter surah"})
     if (!ayat) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter ayat"})
 
@@ -850,7 +850,7 @@ router.get('/fbdown', async (req, res, next) => {
             url = req.query.url
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
 
        fetch(encodeURI(`https://fb-api-zhirrr.vercel.app/?url=${url}`))
@@ -875,7 +875,7 @@ router.get('/textmaker/metallic', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'neon' && theme != 'glow') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -962,7 +962,7 @@ router.get('/textmaker/alam', async (req, res, next) => {
              apikeyInput = req.query.apikey;
         
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
         if (theme != 'summer' && theme != 'flower') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
@@ -1045,7 +1045,7 @@ router.get('/muslim/tahlil', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataTahlil.json`))
         .then(response => response.json())
@@ -1064,7 +1064,7 @@ router.get('/muslim/wirid', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataWirid.json`))
         .then(response => response.json())
@@ -1084,7 +1084,7 @@ router.get('/muslim/ayatkursi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataAyatKursi.json`))
         .then(response => response.json())
@@ -1104,7 +1104,7 @@ router.get('/muslim/doaharian', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataDoaHarian.json`))
         .then(response => response.json())
@@ -1124,7 +1124,7 @@ router.get('/muslim/bacaanshalat', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataBacaanShalat.json`))
         .then(response => response.json())
@@ -1144,7 +1144,7 @@ router.get('/muslim/niatshalat', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataNiatShalat.json`))
         .then(response => response.json())
@@ -1164,7 +1164,7 @@ router.get('/lk21/search', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`http://api-lk21.herokuapp.com/search?query=${kata}`))
         .then(response => response.json())
@@ -1184,7 +1184,7 @@ router.get('/lk21/terbaru', async (req, res, next) => {
          
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     
        fetch(encodeURI(`https://api-lk21.herokuapp.com/newupload`))
         .then(response => response.json())
@@ -1204,7 +1204,7 @@ router.get('/lk21/comingsoon', async (req, res, next) => {
          
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     
        fetch(encodeURI(`https://api-lk21.herokuapp.com/comingsoon`))
         .then(response => response.json())
@@ -1224,7 +1224,7 @@ router.get('/lk21/tvseries', async (req, res, next) => {
          
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     
        fetch(encodeURI(`https://api-lk21.herokuapp.com/tv`))
         .then(response => response.json())
@@ -1244,7 +1244,7 @@ router.get('/lk21/year', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`http://api-lk21.herokuapp.com/year?year=${kata}`))
         .then(response => response.json())
@@ -1264,7 +1264,7 @@ router.get('/lk21/country', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`http://api-lk21.herokuapp.com/country?country=${kata}`))
         .then(response => response.json())
@@ -1284,7 +1284,7 @@ router.get('/lk21/genre', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`http://api-lk21.herokuapp.com/genre?genre=${kata}`))
         .then(response => response.json())
@@ -1304,7 +1304,7 @@ router.get('/maker3d', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/text3d?text=${kata}`))
         .then(response => response.json())
@@ -1324,7 +1324,7 @@ router.get('/maker3d/no2', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/text3d-2?text=${kata}`))
         .then(response => response.json())
@@ -1344,7 +1344,7 @@ router.get('/maker3d/no3', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/text3d-3?text=${kata}`))
         .then(response => response.json())
@@ -1364,7 +1364,7 @@ router.get('/maker3d/no4?', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/text3d-4?text=${kata}`))
         .then(response => response.json())
@@ -1384,7 +1384,7 @@ router.get('/maker', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/textmaker?text=${kata}`))
         .then(response => response.json())
@@ -1404,7 +1404,7 @@ router.get('/maker2', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/textmaker2?text=${kata}`))
         .then(response => response.json())
@@ -1424,7 +1424,7 @@ router.get('/maker3', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/textmaker3?text=${kata}`))
         .then(response => response.json())
@@ -1444,7 +1444,7 @@ router.get('/maker4', async (req, res, next) => {
          kata = req.query.kata   
          
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
     if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://alpin-apikey.herokuapp.com/api/textmaker4?text=${kata}`))
         .then(response => response.json())
@@ -1463,7 +1463,7 @@ router.get('/muslim/kisahnabi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataKisahNabi.json`))
         .then(response => response.json())
@@ -1483,7 +1483,7 @@ router.get('/muslim/asmaulhusna', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/dataAsmaulHusna.json`))
         .then(response => response.json())
@@ -1503,7 +1503,7 @@ router.get('/muslim/niatshubuh', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatShubuh.json`))
         .then(response => response.json())
@@ -1523,7 +1523,7 @@ router.get('/muslim/niatdzuhur', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatDzuhur.json`))
         .then(response => response.json())
@@ -1543,7 +1543,7 @@ router.get('/muslim/niatmaghrib', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatMaghrib.json`))
         .then(response => response.json())
@@ -1563,7 +1563,7 @@ router.get('/muslim/niatisya', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatIsya.json`))
         .then(response => response.json())
@@ -1583,7 +1583,7 @@ router.get('/muslim/niatashar', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/data/NiatAshar.json`))
         .then(response => response.json())
@@ -1603,7 +1603,7 @@ router.get('/wallpaper/cyberspace', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/CyberSpace.json`))
         .then(response => response.json())
@@ -1623,7 +1623,7 @@ router.get('/wallpaper/teknologi', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Technology.json`))
         .then(response => response.json())
@@ -1643,7 +1643,7 @@ router.get('/wallpaper/muslim', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Islamic.json`))
         .then(response => response.json())
@@ -1663,7 +1663,7 @@ router.get('/wallpaper/programming', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Programming.json`))
         .then(response => response.json())
@@ -1683,7 +1683,7 @@ router.get('/wallpaper/pegunungan', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/My-SQL-Results/main/Mountain.json`))
         .then(response => response.json())
@@ -1704,7 +1704,7 @@ router.get('/wikipedia', async (req, res, next) => {
             search = req.query.search
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/wiki?keyword=${search}`))
@@ -1724,7 +1724,7 @@ router.get('/randomquote/muslim', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=agamis`))
         .then(response => response.json())
@@ -1745,7 +1745,7 @@ router.get('/drakorasia', async (req, res, next) => {
             search = req.query.search
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
 
        fetch(encodeURI(`http://docs-api-zahirrr.herokuapp.com/api/drakorasia?search=${search}`))
@@ -1767,7 +1767,7 @@ router.get('/jadwalshalat', async (req, res, next) => {
             kota = req.query.kota
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
 
        fetch(encodeURI(`https://raw.githubusercontent.com/Zhirrr/Zhirrr-Database/main/adzan/${kota}/2021/03.json`))
@@ -1789,7 +1789,7 @@ router.get('/fakedata', async (req, res, next) => {
             country = req.query.country
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!country) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter country"})
 
        fetch(encodeURI(`https://fakename-api-zhirrr.vercel.app/api/fakename?country=${country}`))
@@ -1811,7 +1811,7 @@ router.get('/hilih', async (req, res, next) => {
             kata = req.query.kata
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://hilih-api-zhirrr.vercel.app/api/hilih?kata=${kata}`))
@@ -1833,7 +1833,7 @@ router.get('/liriklagu', async (req, res, next) => {
             lagu = req.query.lagu
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!lagu) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://www.lyricsfreak.com/search.php?q={search}`))
@@ -1855,7 +1855,7 @@ router.get('/chordlagu', async (req, res, next) => {
             lagu = req.query.lagu
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!lagu) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/chord?q=${lagu}`))
@@ -1876,7 +1876,7 @@ router.get('/random/asmaulhusna', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://python-api-zhirrr.herokuapp.com/api/random/asmaulhusna`))
         .then(response => response.json())
@@ -1897,7 +1897,7 @@ router.get('/kbbi', async (req, res, next) => {
             kata = req.query.kata
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
         if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
 
        fetch(encodeURI(`https://kbbi-api-zhirrr.vercel.app/api/kbbi?text=${kata}`))
@@ -1918,7 +1918,7 @@ router.get('/covidindo', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/covid-indonesia`))
         .then(response => response.json())
@@ -1938,7 +1938,7 @@ router.get('/covidworld', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://covid19-api-zhirrr.vercel.app/api/world`))
         .then(response => response.json())
@@ -1959,7 +1959,7 @@ router.get('/kodepos', async (req, res, next) => {
 	    kota = req.query.kota
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	if(!kota) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kota"})
 
        fetch(encodeURI(`https://kodepos-api-zhirrr.vercel.app/?q=${kota}`))
@@ -1981,7 +1981,7 @@ router.get('/cuaca', async (req, res, next) => {
 	    kabupaten = req.query.kabupaten
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	if(!kabupaten) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kabupaten"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/cuaca?kabupaten=${kabupaten}`))
         .then(response => response.json())
@@ -2001,7 +2001,7 @@ router.get('/random/meme', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/meme`))
         .then(response => response.json())
@@ -2021,7 +2021,7 @@ router.get('/quotes/kanye', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=kanye`))
         .then(response => response.json())
@@ -2042,7 +2042,7 @@ router.get('/translate', async (req, res, next) => {
 	    kata = req.query.kata
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	if(!kata) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter kata"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/translate?text=${kata}`))
         .then(response => response.json())
@@ -2063,7 +2063,7 @@ router.get('/anime/kusonime', async (req, res, next) => {
 	    search = req.query.search
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/kusonime?search=${search}`))
         .then(response => response.json())
@@ -2083,7 +2083,7 @@ router.get('/gabut', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/bosan`))
         .then(response => response.json())
@@ -2104,7 +2104,7 @@ router.get('/manga', async (req, res, next) => {
 	    search = req.query.search
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 	if(!search) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter search"})
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/manga?keyword=${search}`))
         .then(response => response.json())
@@ -2124,7 +2124,7 @@ router.get('/random/wallpaper', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/random/wallpaper?genre=acak`))
         .then(response => response.json())
@@ -2144,7 +2144,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
         .then(response => response.json())
@@ -2164,7 +2164,7 @@ router.get('/kuis/tebakgambar', async (req, res, next) => {
         var apikeyInput = req.query.apikey
             
 	if(!apikeyInput) return res.json(loghandler.notparam)
-	if(apikeyInput != 'alpinofc') return res.json(loghandler.invalidKey)
+	if(apikeyInput != 'ojanganz') return res.json(loghandler.invalidKey)
 
        fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=tebakgambar`))
         .then(response => response.json())
