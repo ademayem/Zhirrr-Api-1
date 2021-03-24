@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Only Dev City 2K21">
+	<title>Api Miku</title>
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/core.min.css">
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/alert.min.css">
+	
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/owl.min.css">
+  <link rel="stylesheet" href="https://onlydevcity.xyz/waw/owl2.min.css">
+	
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/icon.min.css">
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/flag.min.css">
+	<link rel="stylesheet" href="https://onlydevcity.xyz/waw/style.min.css">
+	<link rel="shortcut icon" href="https://i.ibb.co/9cPV85f/60fc44f508ec.jpg" />
+</head>
+<body>
+<div class="main-wrapper">
+	<nav class="sidebar">
+		<div class="sidebar-header">
+			<a href="#" class="sidebar-brand">
+				API<span> MIKUBOT</span>
+			</a>
+			<div class="sidebar-toggler not-active">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="sidebar-body">
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="/home" class="nav-link">
+						<i class="link-icon" data-feather="box"></i>
+						<span class="link-title">Rumah</span>
+					</a>
+				</li>
+				
+				<li class="nav-item">
+				<a href="/price" class="nav-link">
+				<i class="link-icon" data-feather="dollar-sign"></i>
+				<span class="link-title">Donasi</span>
+				</a>
+				</li>
+				<li class="nav-item nav-category">Menu Api</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#endecode" role="button" aria-expanded="false" aria-controls="endecode">
+						<i class="link-icon" data-feather="download"></i>
+						<span class="link-title">Sosial Media Api</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="endecode">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="api/fbdown/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY" class="nav-link">Facebook Downloader</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/tiktod/?url=MASUKIN_URL&apikey=MASUKIN_APIKEY" class="nav-link">Tiktok Downloader</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/tiktod/stalk/?username=fauzan_perfect&apikey=MASUKIN_APIKEY" class="nav-link">Tik Tok Stalk</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#exploit" role="button" aria-expanded="false" aria-controls="exploit">
+						<i class="link-icon" data-feather="book"></i>
+						<span class="link-title">Fitur Islam</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="exploit">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="api/hadits?kitab=bukhari&nomor=52&apikey=apikeynya?" class="nav-link">Hadits Shahih</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/quran?surah=1&ayat=2&apikey=apikey_mu?" class="nav-link">Al - Quran</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/muslim/tahlil?apikey=apikeynya?" class="nav-link">Doa Tahlil</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/muslim/wirid?apikey=apikeynya?" class="nav-link">Doa Wirid</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/muslim/doaharian?apikey=apikeynya?" class="nav-link">Doa Harian</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/muslim/ayatkursi?apikey=apikeynya?" class="nav-link">Ayat Kursi</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/kisahnabi?nabi=muhammad&apikey=apikeynya?" class="nav-link">Kisah Nabi</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/muslim/niatshalat?apikey=apikeynya?" class="nav-link">Niat Shalat</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/muslim/bacaanshalat?apikey=apikeynya?" class="nav-link">Bacaan Shalat</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/jadwalshalat?kota=jakarta&apikey=apikeynya?" class="nav-link">Jadwal Shalat</a>
+							</li>
+							<lu class="nav-item">
+							<a href="api/muslim/asmaulhusna?apikey=apikeynya?" class="nav-link">Asmaul Husna</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#checker" role="button" aria-expanded="false" aria-controls="checker">
+						<i class="link-icon" data-feather="wind"></i>
+						<span class="link-title">NSFW</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="checker">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="api/nsfw/ahegao?apikey=apikeynya?" class="nav-link">AHEGAO</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/ass?apikey=apikeynya?" class="nav-link">ASS</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/blowjob?apikey=apikeynya?" class="nav-link">Blowjob</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/bdsm?apikey=apikeynya?" class="nav-link">BDSM</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/cum?apikey=apikeynya?" class="nav-link">CUM</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/wallpaper?apikey=apikeynya?" class="nav-link">wallpaper</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/nsfw/nsfwNeko?apikey=apikeynya?" class="nav-link">NEKO</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#others" role="button" aria-expanded="false" aria-controls="others">
+						<i class="link-icon" data-feather="info"></i>
+						<span class="link-title">Information</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="others">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="api/igstalk?u=itsmeiky&apikey=apikeynya?" class="nav-link">Ig Stalk</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/artinama?q=itsmeiky&apikey=apikeynya?" class="nav-link">Arti Nama</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/joox?q=menepi&apikey=apikeynya?" class="nav-link">Search Joox</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/ytsearch?q=menepi&apikey=apikeynya?" class="nav-link">Yt Search</a>
+							</li>
+							<li class="nav-item">
+								<a href="api/cuaca?kota=bandung&apikey=apikeynya?" class="nav-link">Cuaca</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/iplookup?ip=172.217.194.101&apikey=apikeynya?" class="nav-link">Ip Lockup</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/github?user=ItsmeikyXSec4O4&apikey=apikeynya?" class="nav-link">Stalk Github</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/userwordpress?url=https://teknosentrik.com&apikey=apikeynya?" class="nav-link">User Wordpress</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/tiktod/stalk/?username=MASUKIN_USERNAME&apikey=apikeynya?" class="nav-link">Tiktok Stalk</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/wikipedia?search=jembatan&apikey=apikeynya?" class="nav-link">Wikipedia</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/kbbi?kata=anjing&apikey=apikeynya?" class="nav-link">KBBI</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/infonpm?query=iky-api&hostname=iky&apikey=apikeynya?" class="nav-link">Info NPM</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/jadwalbola?apikey=apikeynya?" class="nav-link">Jadwal Bola</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/spek/gsmarena?query=samsung&apikey=apikeynya?" class="nav-link">GSM Arena</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/googleplay?q=freefire&apikey=apikeynya?" class="nav-link">Google Playstore</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/searchresi?courier=jne&awb=8825112045716759&apikey=apikeynya?" class="nav-link">Cek Resi</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/infofilm?q=avengers&apikey=apikeynya?" class="nav-link">Info Film</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/country/infofilm?search=france&apikey=apikeynya?" class="nav-link">Info Film Word</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/rateuang?from=USD&to=EUR&amount=2000&apikey=apikeynya?" class="nav-link">Hitung Rate</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/lk21?query=avengers&apikey=apikeynya?" class="nav-link">LK21</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/resepmasakan?q=tahu&apikey=apikeynya?" class="nav-link">Info Makanan</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#newsapi" role="button" aria-expanded="false" aria-controls="newsapi">
+							<i class="link-icon" data-feather="info"></i>
+							<span class="link-title">News API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="newsapi">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/news/liputan6?apikey=apikeynya?" class="nav-link">Liputan 6</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/news/cnnnews?apikey=apikeynya?" class="nav-link">CNN News</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/news/republika?apikey=apikeynya?" class="nav-link">Republika</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/news/temponews?apikey=apikeynya?" class="nav-link">Tempo News</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/news/kumpurannews?apikey=apikeynya?" class="nav-link">Kumparan News</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#imagesearch" role="button" aria-expanded="false" aria-controls="imagesearch">
+							<i class="link-icon" data-feather="image"></i>
+							<span class="link-title">Image Search</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="imagesearch">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/pixabay?q=bunga&apikey=apikeynya?" class="nav-link">Pixebay</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#photooxyapi" role="button" aria-expanded="false" aria-controls="photooxyapi">
+							<i class="link-icon" data-feather="camera"></i>
+							<span class="link-title">Photooxy API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="photooxyapi">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/textmaker?text=halo&text2=hai&theme=glitch&apikey=apikeynya?" class="nav-link">Glitch</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=apikeynya?" class="nav-link">Google Suggestion</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=apikeynya?" class="nav-link">PUBG</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/game?text=halo&text2=hai&theme=battlefield&apikey=apikeynya?" class="nav-link">Battle Field</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/senja?text=Itsmeiky&theme=coffee-cup&apikey=apikeynya?" class="nav-link">Coffe Cup</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/senja?text=Itsmeiky&theme=coffee-cup2&apikey=apikeynya?" class="nav-link">Coffe Cup 2</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/metallic?text=Itsmeiky&theme=neon&apikey=apikeynya?" class="nav-link">Neon</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/metallic?text=Itsmeiky&theme=glow&apikey=apikeynya?" class="nav-link">Glow</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/alam?text=Itsmeiky&theme=summer&apikey=apikeynya?" class="nav-link">Summer</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/alam?text=Itsmeiky&theme=flower&apikey=apikeynya?" class="nav-link">Flower</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro6?text=Itsmeiky&theme=grandient&apikey=apikeynya?" class="nav-link">Grandient</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro7?text=Itsmeiky&theme=embroidery&apikey=apikeynya?" class="nav-link">Embroidery</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro7?text=Itsmeiky&theme=candy&apikey=apikeynya?" class="nav-link">Candy</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro2?text=Itsmeiky&theme=onesilk&apikey=apikeynya?" class="nav-link">Onesilk</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro1?text=Itsmeiky&theme=glowing&apikey=apikeynya?" class="nav-link">Glowing</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro6?text=Itsmeiky&theme=vintage&apikey=apikeynya?" class="nav-link">Vintage</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro4?text=Itsmeiky&theme=funnycup&apikey=apikeynya?" class="nav-link">Funny Cup</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro5?text=Itsmeiky&theme=orchids-flower&apikey=apikeynya?" class="nav-link">Orchids Flower</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro5?text=Itsmeiky&theme=smoke2&apikey=apikeynya?" class="nav-link">Smoke 2</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro3?text=Itsmeiky&theme=loveone&apikey=apikeynya?" class="nav-link">Love One</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro3?text=Itsmeiky&theme=smoke&apikey=apikeynya?" class="nav-link">Smoke</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro?text=Itsmeiky&theme=heart&apikey=apikeynya?" class="nav-link">Heart</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/pro?text=Itsmeiky&theme=wolf-metal&apikey=apikeynya?" class="nav-link">Wolf Metal</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#photooxy2api" role="button" aria-expanded="false" aria-controls="photooxy2api">
+							<i class="link-icon" data-feather="camera"></i>
+							<span class="link-title">Photooxy 2 API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="photooxy2api">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/textpro/onedev5?text=Itsmeiky&theme=cemetery&apikey=apikeynya?" class="nav-link">Cemetery</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev6?text=Itsmeiky&theme=royallock&apikey=apikeynya?" class="nav-link">Royal Lock</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev5?text=Itsmeiky&theme=underglass&apikey=apikeynya?" class="nav-link">Underglass</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev?text=Itsmeiky&theme=woodheart&apikey=apikeynya?" class="nav-link">Wood Heart</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev?text=Itsmeiky&theme=summertext&apikey=apikeynya?" class="nav-link">Summer Text</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev1?text=Itsmeiky&theme=nature3d&apikey=apikeynya?" class="nav-link">Nature 3D</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev1?text=Itsmeiky&theme=underwater-ocean&apikey=apikeynya?" class="nav-link">Underwater Ocean</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev2?text=Itsmeiky&theme=rosegold&apikey=apikeynya?" class="nav-link">Rose Gold</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev2?text=Itsmeiky&theme=nature&apikey=apikeynya?" class="nav-link">Nature</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev3?text=Itsmeiky&theme=textsky&apikey=apikeynya?" class="nav-link">Text Sky</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev3?text=Itsmeiky&theme=textonecup&apikey=apikeynya?" class="nav-link">Text One Cup</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev4?text=Itsmeiky&theme=burnpaper&apikey=apikeynya?" class="nav-link">Burn Paper</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev4?text=Itsmeiky&theme=lovemessage&apikey=apikeynya?" class="nav-link">Love Message</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro9?text=Itsmeiky&theme=rainbow3d&apikey=apikeynya?" class="nav-link">Rainbow 3D</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro9?text=Itsmeiky&theme=thenight&apikey=apikeynya?" class="nav-link">The Night</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro10?text=Itsmeiky&theme=shinetext&apikey=apikeynya?" class="nav-link">Shine Text</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro10?text=Itsmeiky&theme=birthday&apikey=apikeynya?" class="nav-link">Happy Birthday</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/pro11?text=Itsmeiky&theme=butterfly&apikey=apikeynya?" class="nav-link">Butterfly</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textpro/onedev13?text=halo&text2=beban&theme=8bit&apikey=apikeynya?=apikeynya?" class="nav-link">8 BIT</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc1?text=Itsmeiky&theme=watermelon&apikey=apikeynya?" class="nav-link">Water Melon</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc2?text=Itsmeiky&theme=grafity&apikey=apikeynya?" class="nav-link">Banner Grafity</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc1?text=Itsmeiky&theme=whitecube&apikey=apikeynya?" class="nav-link">White Cube</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc2?text=Itsmeiky&theme=glowingtext&apikey=apikeynya?" class="nav-link">Glowing Text</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc3?text=Itsmeiky&theme=blackstyle&apikey=apikeynya?=apikeynya?" class="nav-link">Black Style</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/textmaker/odc3?text=Itsmeiky&theme=crisp-chromed&apikey=apikeynya?" class="nav-link">Crisp Chromed</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#sertimaker" role="button" aria-expanded="false" aria-controls="sertimaker">
+							<i class="link-icon" data-feather="image"></i>
+							<span class="link-title">FREE API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="sertimaker">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/AnakHaramSerti/img.php?nama=TEXT" class="nav-link">Anak Haram Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/HekerSerti/img.php?nama=Heker" class="nav-link">Hacker Sertifikat</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/BabuSerti/img.php?nama=TEXT" class="nav-link">Babu Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/EpepSerti/img.php?nama=HEKERS" class="nav-link">Free Fire Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/BucinSerti/img.php?nama=TEXT" class="nav-link">Bucin Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/CilEpepSerti/img.php?nama=TEXT" class="nav-link">Bocil Epep Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/GaySerti/img.php?nama=TEXT" class="nav-link">Gay Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/PacarSerti/img.php?nama=TEXT" class="nav-link">Pacar Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/SadBoySerti/img.php?nama=TEXT" class="nav-link">Sad Boy Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/SurgaSerti/img.php?nama=TEXT" class="nav-link">Surga Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/PintarSerti/img.php?nama=TEXT" class="nav-link">Pintar Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/BadGirlSerti/img.php?nama=TEXT" class="nav-link">Bad Girl Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/BadBoySerti/img.php?nama=TEXT" class="nav-link">Bad Boy Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/GoodGirlSerti/img.php?nama=TEXT" class="nav-link">Good Girl Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/GoodBoySerti/img.php?nama=TEXT" class="nav-link">Good Boy Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/EditorBerkelasSerti/img.php?nama=TEXT" class="nav-link">Editor Berkelas Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/GoodLookingSerti/img.php?nama=TEXT" class="nav-link">Good Looking Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/FucekBoySerti/img.php?nama=TEXT" class="nav-link">Fucek Boy Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/JametSerti/img.php?nama=TEXT" class="nav-link">Jamet Serti</a>
+							</li>
+							<li class="nav-item">
+							<a href="https://onlydevcity.xyz/YoutuberSerti/img.php?nama=TEXT" class="nav-link">Youtuber Serti</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#imagesapi" role="button" aria-expanded="false" aria-controls="imagesapi">
+							<i class="link-icon" data-feather="image"></i>
+							<span class="link-title">Images API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="imagesapi">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/wallpaper/teknologi?apikey=apikeynya?" class="nav-link">Wallpaper Teknologi</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/wallpaper/programming?apikey=apikeynya?" class="nav-link">Wallpaper Programming</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/wallpaper/cyberspace?apikey=apikeynya?" class="nav-link">Wallpaper CyberSpace</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/wallpaper/muslim?apikey=apikeynya?" class="nav-link">Wallpaper Muslim</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/wallpaper/pegunungan?apikey=apikeynya?" class="nav-link">Wallpaper Mountain View</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/randomimage/blackpink?apikey=apikeynya?" class="nav-link">Wallpaper Blackpink</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/hentai?apikey=apikeynya?" class="nav-link">Wallpaper Hentai</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#randomapi" role="button" aria-expanded="false" aria-controls="randomapi">
+							<i class="link-icon" data-feather="paperclip"></i>
+							<span class="link-title">Random API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="randomapi">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/randomquote?apikey=apikeynya?" class="nav-link">Random Quotes</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/randomquote/muslim?apikey=apikeynya?" class="nav-link">Quotes Islami</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/randomimage/blackpink?apikey=apikeynya?" class="nav-link">Random Loli</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/random/asmaulhusna?apikey=apikeynya?" class="nav-link">Random Asmaul Husna</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/random/katakatagombal?apikey=apikeynya?" class="nav-link">Random Kata Gombal</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/random/meme?apikey=apikeynya?" class="nav-link">Random Meme</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/quotes/kanye?apikey=apikeynya?" class="nav-link">Random Kanye</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/gabut?apikey=apikeynya?" class="nav-link">Gabut</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/random/wallpaper?apikey=apikeynya?" class="nav-link">Random Wallpaper</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/kuis/caklontong?apikey=apikeynya?" class="nav-link">Cak Lontong ( By Zahir )</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/kuis/tebakgambar?apikey=apikeynya?" class="nav-link">Tebak Gambar ( By Zahir )</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/simisimi?text=haii&apikey=apikeynya?" class="nav-link">Simi Simi</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/randomlizard?apikey=apikeynya?" class="nav-link">Random Lizard</a>
+							</li>
+							</ul>
+							</div>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" data-toggle="collapse" href="#otherapi" role="button" aria-expanded="false" aria-controls="otherapi">
+							<i class="link-icon" data-feather="coffee"></i>
+							<span class="link-title">Other API</span>
+							<i class="link-arrow" data-feather="chevron-down"></i>
+							</a>
+							<div class="collapse" id="otherapi">
+							<ul class="nav sub-menu">
+							<li class="nav-item">
+							<a href="api/nulis?text=IkyGanteng&apikey=apikeynya?" class="nav-link">Nulis Buku</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/infogempa?apikey=apikeynya?" class="nav-link">Info Gempa</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/short/tiny?url=google.com&apikey=apikeynya?" class="nav-link">Shortlink</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/short/vgd?url=google.com&apikey=apikeynya?" class="nav-link">Shortlink 2</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/short/isgd?url=google.com&apikey=apikeynya?" class="nav-link">Shortlink 3</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/drakorasia?search=tale&apikey=apikeynya?" class="nav-link">Drakor Asia</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/faktaunik?apikey=apikeynya?" class="nav-link">Fakta Unik</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/covidworld?apikey=apikeynya?" class="nav-link">Covid World</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/covidindo?apikey=apikeynya?" class="nav-link">Covid Indo</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/fakedata?country=en&apikey=apikeynya?" class="nav-link">Fake Address</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/hilih?kata=aku%20sayang%20kamu&apikey=apikeynya?" class="nav-link">Hilih</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/liriklagu?lagu=noel%20gallagher&apikey=apikeynya?" class="nav-link">Lirik Lagu</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/chordlagu?lagu=menepi&apikey=apikeynya?" class="nav-link">Chord Lagu</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/translate?text=saya&to=en&apikey=apikeynya?" class="nav-link">Translate</a>
+							</li>
+							<li class="nav-item">
+							<a href="api/kodepos?kota=bandung&apikey=apikeynya?" class="nav-link">Kode Pos</a>
+							</li>
+							</li>
+						</ul>
+					</div>
+					
+					<li class="nav-item nav-category">About</li>
+					<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#sosmed" role="button" aria-expanded="false" aria-controls="sosmed">
+					<i class="link-icon" data-feather="star"></i>
+					<span class="link-title">Sosial Media</span>
+					<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="sosmed">
+					<ul class="nav sub-menu">
+					<li class="nav-item">
+					<a href="href="https://github.com/itsmeikyxsec4O4" class="nav-link">Github</a>
+					</li>
+					<li class="nav-item">
+					<a href="https://tools.itsmeikyxsec404.xyz" class="nav-link">Tools Online</a>
+					</li>
+					<li class="nav-item">
+					<a href="https://api.whatsapp.com/send/?phone=6281285627596&text=min%20mau%20beli%20apikey&app_absent=0" class="nav-link">WhatsApp</a>
+					</li>
+					<li class="nav-item">
+					<a href="https://instagram.com/itsmeikyxsec404" class="nav-link">Instagram</a>
+					</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+	</nav><div class="page-wrapper">
+	<nav class="navbar">
+		<a href="#" class="sidebar-toggler">
+			<i data-feather="menu"></i>
+		</a>
+		<div class="navbar-content">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown nav-apps">
+					<a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i data-feather="grid"></i>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="appsDropdown">
+						<div class="dropdown-header d-flex align-items-center justify-content-between">
+							<p class="mb-0 font-weight-medium">
+								Web App
+							</p>
+						</div>
+						<div class="dropdown-body">
+							<div class="d-flex align-items-center apps">
+								<a href=https://github.com/itsmeikyxsec4O4" target="_blank"><i data-feather="message-square" class="icon-lg"></i><p>
+								Github
+							</p>
+							</a>
+							<a href="https://api.whatsapp.com/send/?phone=6281285627596&text=min%20mau%20beli%20apikey&app_absent=0" target="_blank"><i data-feather="globe" class="icon-lg"></i><p>
+								WhatsApp
+							</p>
+							</a>
+	
+							</div>
+						</div>
+						<div class="dropdown-footer d-flex align-items-center justify-content-center">
+							Silent-Sec Team
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+<div class="page-content">
+	<div class="row">
+		<div class="col-md-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<h6 class="card-title">MIKU BOT</h6>
+					<img src="https://i.ibb.co/KhW2HY1/MIKU.jpg" alt="social indo" class="img-fluid">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 grid-margin stretch-card">
+			<div class="card">
+				<div class="card-body">
+					<h6 class="card-title">Assalamualaikum.</h6>
+					<p>
+						 </p><br>Selamat Datang Di Rest Api Miku Bot,<br> Web Api Ini Saya Buat Karna Untuk Mengisi Waktu Luang Saya :) <br> Api Ini Free Ga Usah Bayar. <br>
+						 </p> Apikeynya: ojanganz <br>------------------------------------------------------------------------<br>
+						<br>Jika Menemukan Bug Segera Lapor Ke Owner <a href="https://wa.me/6289666262976?text=Assalamualaikum"><strong>Klik Sini</strong></a><br> Sekian Terimakasih. <br><br>
+					<p>
+					</p>
+					<p>
+						<strong>Rules Web Api Miku:</strong>
+					<br>
+					<ol>
+					<li> Jangan Rusak Situs Ini</li>
+						<li> Ada Api Yang Tidak Berfungsi Segera Lapor Admin!</li>
+						<li> Apikey Ini Gratis Buat Kalian Gak Usah Bayar. </li>
+						<li> Dah Lah Anying Aokwowk</li>
+							<li> Sekian Terimakasih. </li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 grid-margin">
+			<div class="card">
+				<div class="card-body">
+					<h6 class="card-title"> My Partner</h6>
+					<div class="owl-carousel owl-theme owl-auto-play">
+            <div class="item">
+              <img src="https://i.ibb.co/ZVbJVpk/IMG-20210323-WA0375.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/NFJ1h1R/20210318-213412.jpg" alt="item-image">
+            </div>
+            <div class="item">
+              <img src="https://i.ibb.co/wNmFK4D/IMG-20210320-WA0380.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/t45MCZs/af8c16fe81b7.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/8jJv1Ww/58f9332f1491.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/j3SQ3Wz/31bbba1ed34a.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/vcm0Tp6/6a7c8988c38d.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/TrKDK7S/1cf38d6c96d3.jpg" alt="item-image">
+            </div>
+            <div class="item">
+            <img src="https://i.ibb.co/7CbMRH7/1d92d3e23ed8.jpg" alt="item-image">
+            </div>
+          </div>
+          <div align=center><br><b>Visitor : </b><br><img src="https://www.cutercounter.com/hits.php?id=hrxknocf&nd=6&style=5" border="0" alt="OnlyDev" width="100"></img></br></div>
+          </div>
+			</div>
+		</div>
+	</div>
+<div class="col-md-12 grid-margin">
+	<div class="card">
+	<div class="card-body">
+	<h6 class="card-title">New Update</h6>
+	<strong>[FREE API ] Sertifikat Maker</strong><br><br>
+	</p>
+	<ol>
+	<li>- Sertifikat Hacker</li>
+	<li>- Sertifikat Free Fire</li>
+	<li>- Sertifikat Youtube</li>
+	<li>- Sertifikat Jamet</li>
+	<li>- Sertifikat Fucekboy</li>
+	<li>- Sertifikat GoodLoocking</li>
+	<li>- Sertifikat Editod Berkelas</li>
+	<li>- Sertifikat Goodboy</li>
+	<li>- Sertifikat Goodgirls</li>
+	<li>- Sertifikat BadBoy</li>
+	<li>- Sertifikat BadGirls</li>
+	<li>- Sertifikat Pintar</li>
+	<li>- Sertifikat Sadboy</li>
+	<li>- Sertifikat Pacar</li>
+	<li>- Sertifikat Gay </li>
+	<li>- Sertifikat Bocil FF</li>
+	<li>- Sertifikat Bucin</li>
+	<li>- Sertifikat Babu</li>
+	</ol>
+	<strong>Nsfw</strong><br><br>
+	<ol>
+	<li>- Neko2</li>
+	</ol>
+	<strong>Random API</strong><br><br>
+	<ol>
+	<li>- Random Lizard</li>
+	</ol>
+	</div>
+	</div>
+	<iframe allow="autoplay" width="0" height="0" src="https://k.top4top.io/m_1906fz8td0.mp3" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div><footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between">
+				<p class="text-muted text-center text-md-left">
+					Copyright © 2021 <a href="" target="_blank">FznXSec404</a>. All rights reserved
+				</p>
+				<p class="text-muted text-center text-md-left mb-0 d-none d-md-block">
+					Coded With <i class="mb-1 text-primary ml-1 icon-small" data-feather="heart"></i> FznXSec404
+				</p>
+			</footer>
+		</div>
+	</div>
+
+	<script src="https://onlydevcity.xyz/waw/core.js"></script>
+	<script src="https://onlydevcity.xyz/waw/alert.js"></script>
+	
+	<script src="https://onlydevcity.xyz/waw/owl.js"></script>
+	
+	<script src="https://onlydevcity.xyz/waw/feather.js"></script>
+	<script src="https://onlydevcity.xyz/waw/template.js"></script>
+	<script src="https://onlydevcity.xyz/waw/script.js"></script>
+	<script src="https://onlydevcity.xyz/waw/checker.js"></script>
+	</body>
+</html>
